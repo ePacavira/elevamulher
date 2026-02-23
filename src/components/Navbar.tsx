@@ -9,7 +9,7 @@ const Navbar = () => {
   const location = useLocation()
 
   const navLinks = [
-    { path: '/', label: 'Início' },
+    { path: '/home', label: 'Início' },
     { path: '/sobre', label: 'Sobre' },
     { path: '/historia', label: 'História' },
     { path: '/transparencia', label: 'Transparência' },
@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/home" className="flex items-center">
             <LogoFull />
           </Link>
 

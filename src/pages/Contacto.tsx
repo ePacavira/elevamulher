@@ -37,8 +37,15 @@ const Contacto = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-verde-petroleo to-marrom-escuro text-white py-20">
-        <div className="container-custom">
+      <section className="bg-gradient-to-br from-verde-petroleo to-marrom-escuro text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-10">
+          <img
+            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

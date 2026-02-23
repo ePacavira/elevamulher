@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import logo from '../assets/logo.svg'
 
 interface LogoProps {
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
   className?: string
 }
 
@@ -11,6 +11,7 @@ const Logo = ({ size = 'md', className = '' }: LogoProps) => {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
+    xl: 'w-20 h-20',
   }
 
   return (

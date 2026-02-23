@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Landing from './pages/Landing'
 import Home from './pages/Home'
 import Sobre from './pages/Sobre'
 import Historia from './pages/Historia'
@@ -24,11 +25,14 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Página de escolha na raiz */}
+        <Route path="/" element={<Landing />} />
+        
         {/* Rota do evento sem Navbar e Footer */}
         <Route path="/evento-imersao" element={<EventoImersao />} />
         
         {/* Rotas principais com Navbar e Footer */}
-        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/home" element={<Layout><Home /></Layout>} />
         <Route path="/sobre" element={<Layout><Sobre /></Layout>} />
         <Route path="/historia" element={<Layout><Historia /></Layout>} />
         <Route path="/transparencia" element={<Layout><Transparencia /></Layout>} />
