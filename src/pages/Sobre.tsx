@@ -140,7 +140,7 @@ const Sobre = () => {
 
           <div className="relative">
             {/* Linha conectora (desktop) */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-verde-petroleo via-caramelo via-dourado-couro to-terracota transform -translate-y-1/2 rounded-full shadow-lg"></div>
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-verde-petroleo via-caramelo to-terracota transform -translate-y-1/2 rounded-full shadow-lg"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
               {[

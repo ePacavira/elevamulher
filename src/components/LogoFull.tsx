@@ -27,3 +27,4 @@ const LogoFull = ({ showTagline = false, className = '' }: LogoFullProps) => {
 
 export default LogoFull
 
+

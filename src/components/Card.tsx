@@ -27,3 +27,4 @@ const Card = ({ children, className = '', delay = 0, onClick }: CardProps) => {
 
 export default Card
 
+

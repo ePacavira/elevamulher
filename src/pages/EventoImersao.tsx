@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import Card from '../components/Card'
 import Button from '../components/Button'
 import Logo from '../components/Logo'
-import plpImage from '../assets/plp.png'
 import svg02 from '../assets/02.svg'
+
+// Imagem de fundo do hero (substituir por plp.png em assets quando disponível)
+const HERO_BG_IMAGE = 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80'
 
 const EventoImersao = () => {
   return (
@@ -14,7 +16,7 @@ const EventoImersao = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src={plpImage}
+            src={HERO_BG_IMAGE}
             alt="Encontro de Imersão"
             className="w-full h-full object-cover object-center opacity-50"
           />
@@ -196,7 +198,7 @@ const EventoImersao = () => {
       <section className="py-24 bg-gradient-to-br from-verde-petroleo to-marrom-escuro text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src={plpImage}
+            src={HERO_BG_IMAGE}
             alt=""
             className="w-full h-full object-cover"
           />

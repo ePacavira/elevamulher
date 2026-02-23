@@ -38,7 +38,6 @@ const ComoAjudar = () => {
         console.error('Erro ao partilhar:', err)
       }
     } else {
-      // Fallback: copiar URL
       try {
         await navigator.clipboard.writeText(`${texto} ${url}`)
         alert('Link copiado para a área de transferência!')
@@ -47,6 +46,7 @@ const ComoAjudar = () => {
       }
     }
   }
+  const handlePartilhar = partilharCampanha
 
   return (
     <div className="pt-20">
@@ -278,7 +278,12 @@ const ComoAjudar = () => {
                         {item.icon}
                       </div>
                       <h3 className="text-xl font-bold text-marrom-escuro mb-3">{item.title}</h3>
-                      <p className="text-marrom-escuro/70 leading-relaxed">{item.description}</p>
+                      <p className="text-marrom-escuro/70 leading-relaxed mb-4">{item.description}</p>
+                      {item.title === 'Partilhar Campanha' && (
+                        <Button onClick={handlePartilhar} variant="outline" className="border-terracota text-terracota hover:bg-terracota hover:text-white">
+                          Partilhar
+                        </Button>
+                      )}
                     </motion.div>
                   ))}
                 </div>
