@@ -5,6 +5,10 @@ import Button from '../components/Button'
 import plpImage from '../assets/plp.png'
 import svg02 from '../assets/02.svg'
 
+const WHATSAPP_EVENTO = '244938565536'
+const MENSAGEM_INSCRICAO = 'Olá! Gostaria de me inscrever no Encontro de Imersão - Entre o Silêncio e a Voz (28 de Março).'
+const urlInscrever = `https://wa.me/${WHATSAPP_EVENTO}?text=${encodeURIComponent(MENSAGEM_INSCRICAO)}`
+
 const EventoImersao = () => {
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 })
 
@@ -90,7 +94,7 @@ const EventoImersao = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-center lg:items-start"
               >
-                <Button variant="primary" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 min-w-[140px]">
+                <Button href={urlInscrever} variant="primary" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 min-w-[140px]">
                   Inscrever-me
                 </Button>
                 <Button variant="secondary" className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 min-w-[140px]">
@@ -377,7 +381,7 @@ const EventoImersao = () => {
               Vagas limitadas! Garanta já o seu lugar neste encontro transformador
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" className="!bg-white !text-verde-petroleo hover:!bg-bege-claro hover:!text-marrom-escuro text-lg px-8 py-4">
+              <Button href={urlInscrever} variant="primary" className="!bg-white !text-verde-petroleo hover:!bg-bege-claro hover:!text-marrom-escuro text-lg px-8 py-4">
                 Inscrever-me Agora
               </Button>
               <Link to="/home">
